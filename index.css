@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--veryLightGray);
+    font-family: "Lexend Deca", serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 1.4rem;
+}
+
+.container {
+    max-width: 340px;
+    text-align: left;
+}
+
+.sedans,
+.suvs,
+.luxury {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.sedans {
+    background-color: var(--brightOrange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.suvs {
+    background-color: var(--darkCyan);
+}
+
+.luxury {
+    background-color: var(--veryDarkCyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sedans h1,
+.suvs h1,
+.luxury h1 {
+    font-family: "Big Shoulders Display", serif;
+    color: var(--veryLightGray);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.sedans p,
+.suvs p,
+.luxury p {
+    font-size: 15px;
+    line-height: 1.5rem;
+    color: var(--transparentWhite);
+}
+
+.sedans button,
+.suvs button,
+.luxury button {
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    border: none;
+}
+
+.sedans button {
+    color: var(--brightOrange);
+    font-weight: 700;
+}
+
+.suvs button {
+    color: var(--darkCyan);
+    font-weight: 700;
+}
+
+.luxury button {
+    color: var(--veryDarkCyan);
+    font-weight: 700;
+}

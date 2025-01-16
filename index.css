@@ -26,17 +26,17 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5rem 1.4rem;
 }
 
 .container {
     max-width: 340px;
     text-align: left;
+    margin: 5rem 1.4rem;
 }
 
+/* Common Card Styles */
 .sedans,
 .suvs,
 .luxury {
@@ -46,8 +46,10 @@ main {
     align-items: flex-start;
     justify-content: center;
     gap: 1.8rem;
+    border-radius: 0;
 }
 
+/* Individual Card Styles */
 .sedans {
     background-color: var(--brightOrange);
     border-top-left-radius: 10px;
@@ -64,6 +66,7 @@ main {
     border-bottom-right-radius: 10px;
 }
 
+/* Headings */
 .sedans h1,
 .suvs h1,
 .luxury h1 {
@@ -73,6 +76,7 @@ main {
     font-size: 2.5rem;
 }
 
+/* Paragraphs */
 .sedans p,
 .suvs p,
 .luxury p {
@@ -81,25 +85,73 @@ main {
     color: var(--transparentWhite);
 }
 
+/* Buttons */
 .sedans button,
 .suvs button,
 .luxury button {
+    border: 2px solid var(--veryLightGray);
     padding: 0.8rem 2rem;
     border-radius: 20px;
-    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Smooth hover transition */
 }
 
 .sedans button {
     color: var(--brightOrange);
-    font-weight: 700;
 }
 
 .suvs button {
     color: var(--darkCyan);
-    font-weight: 700;
 }
 
 .luxury button {
     color: var(--veryDarkCyan);
-    font-weight: 700;
+}
+
+/* Hover Effects */
+button:hover {
+    color: var(--veryLightGray);
+}
+
+.sedans button:hover {
+    background-color: var(--brightOrange);
+}
+
+.suvs button:hover {
+    background-color: var(--darkCyan);
+}
+
+.luxury button:hover {
+    background-color: var(--veryDarkCyan);
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 900px;
+        margin: 0;
+    }
+
+    .sedans p,
+    .suvs p,
+    .luxury p {
+        margin-bottom: 3rem;
+    }
+
+    .sedans {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .luxury {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
 }
